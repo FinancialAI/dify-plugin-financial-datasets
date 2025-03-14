@@ -7,7 +7,7 @@ from dify_plugin.entities.tool import ToolInvokeMessage
 from tools.base import Endpoint, get_required_parameter, query
 
 
-class FinancialStatementsTool(Tool):
+class InsiderTradesTool(Tool):
     """
     A tool for retrieving company facts based on a given ticker symbol.
     """
@@ -28,12 +28,11 @@ class FinancialStatementsTool(Tool):
         """
 
         ticker = get_required_parameter(tool_parameters, "ticker")
-        period = get_required_parameter(tool_parameters, "period")
         limit = tool_parameters.get("limit", None)
 
         resp = query(
             credentials=self.runtime.credentials,
-            endpoint=Endpoint.FINANCIAL_STATEMENTS,
-            params={"ticker": ticker, "period": period, "limit": limit},
+            endpoint=Endpoint.INSIDER_TRADES,
+            params={"ticker": ticker, "limit": limit},
         )
         yield self.create_text_message(resp)
