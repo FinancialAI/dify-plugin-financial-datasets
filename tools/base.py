@@ -11,6 +11,7 @@ class Endpoint(Enum):
     """
 
     COMPANY_FACTS = "/company/facts"
+    CRYPTO_PRICES = "/crypto/prices"
 
 
 BASE_URL = "https://api.financialdatasets.ai/"
@@ -38,12 +39,31 @@ def query(credentials: dict[str, Any], endpoint: Endpoint, params: dict):
             "X-API-KEY": credentials["financial_datasets_api_key"],
             "Content-Type": "application/json",
         }
+        params = {k: v for k, v in params.items() if v is not None}
         response = requests.get(
             urljoin(BASE_URL, endpoint.value), params=params, headers=headers
         )
-        response.raise_for_status()
+        # response.raise_for_status()
         return response.text
     except requests.exceptions.RequestException as e:
         raise Exception(f"Error sending request: {e}")
     except Exception as e:
         raise Exception(f"Error processing response: {e}")
+
+
+def get_required_parameter(tool_parameters: dict[str, Any], parameter: str):
+    """
+    Checks if the specified parameter is present in the tool parameters.
+
+    Args:
+        tool_parameters (dict[str, Any]): A dictionary containing the parameters
+            required for the tool.
+        parameter (str): The name of the parameter to check.
+
+    Raises:
+        ValueError: If the specified parameter is missing from tool_parameters.
+    """
+    if parameter not in tool_parameters:
+        raise ValueError(f"Missing required parameter: {parameter}")
+
+    return tool_parameters[parameter]

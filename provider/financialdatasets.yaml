@@ -36,6 +36,7 @@ credentials_for_provider:
     url: https://www.financialdatasets.ai
 tools:
   - tools/company_facts/company_facts.yaml
+  - tools/crypto_prices/crypto_prices.yaml
 extra:
   python:
     source: provider/financialdatasets.py
