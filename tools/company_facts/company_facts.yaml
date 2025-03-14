@@ -1,0 +1,26 @@
+identity:
+  name: company_facts
+  author: financialai
+  label:
+    en_US: Company Facts
+    zh_Hans: 公司概况
+description:
+  human:
+    en_US: Get company facts for a ticker. Company facts includes data like name, CIK, market cap, total employees, website URL, and more.
+    zh_Hans: 获取股票代码的公司信息。公司信息包括名称、CIK、市值、员工总数、网站网址等数据。
+  llm: Get company facts for a ticker. Company facts includes data like name, CIK, market cap, total employees, website URL, and more.
+parameters:
+  - name: ticker
+    type: string
+    required: true
+    label:
+      en_US: Ticker symbol
+      zh_Hans: 股票代码
+    human_description:
+      en_US: The ticker symbol of the company you want to get facts for.
+      zh_Hans: 您想获取公司信息的公司的股票代码。
+    llm_description: The ticker symbol of the company you want to get facts for.
+    form: llm
+extra:
+  python:
+    source: tools/company_facts/company_facts.py

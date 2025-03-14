@@ -1,0 +1,31 @@
+identity:
+  author: financialai
+  name: financialdatasets
+  label:
+    en_US: Financial Datasets
+    zh_Hans: 金融数据集
+  description:
+    en_US: Welcome to Financial Datasets, a developer-friendly stock market API.
+    zh_Hans: 欢迎使用金融数据集，这是一个开发人员友好的股票市场 API。
+  icon: favicon.ico
+  tags:
+    - finance
+credentials_for_provider:
+  financial_datasets_api_key:
+    type: secret-input
+    required: true
+    label:
+      en_US: Financial Datasets API key
+      zh_Hans: 金融数据集 API 密钥
+    placeholder:
+      en_US: Please input your Financial Datasets API key
+      zh_Hans: 请输入您的金融数据集 API 密钥
+    help:
+      en_US: Get your Financial Datasets API key from financialdatasets.ai
+      zh_Hans: 从 financialdatasets.ai 获取您的金融数据集 API 密钥
+    url: https://www.financialdatasets.ai
+tools:
+  - tools/company_facts/company_facts.yaml
+extra:
+  python:
+    source: provider/financialdatasets.py

@@ -1,0 +1,34 @@
+version: 0.0.1
+type: plugin
+author: financialai
+name: financialdatasets
+label:
+  en_US: Financial Datassets
+  zh_Hans: 金融数据集
+description:
+  en_US: Welcome to Financial Datasets, a developer-friendly stock market API.
+  zh_Hans: 欢迎使用金融数据集，这是一个开发人员友好的股票市场 API。
+icon: favicon.ico
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: true
+    storage:
+      enabled: true
+      size: 1048576
+plugins:
+  tools:
+    - provider/financialdatasets.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+created_at: 2025-03-14T16:30:22.81793+08:00
+privacy: PRIVACY.md
+verified: false
