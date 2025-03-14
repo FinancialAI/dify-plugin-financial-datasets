@@ -45,6 +45,7 @@ tools:
   - tools/insider_trades/config.yaml
   - tools/institutional_ownership/config.yaml
   - tools/company_news/config.yaml
+  - tools/stock_prices/config.yaml
 extra:
   python:
     source: provider/financialdatasets.py

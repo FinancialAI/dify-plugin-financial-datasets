@@ -20,6 +20,7 @@ class Endpoint(Enum):
     INSIDER_TRADES = "/insider-trades"
     INSTITUTIONAL_OWNERSHIP = "/institutional-ownership"
     COMPANY_NEWS = "/news"
+    STOCK_PRICES = "/prices"
 
 
 BASE_URL = "https://api.financialdatasets.ai/"
