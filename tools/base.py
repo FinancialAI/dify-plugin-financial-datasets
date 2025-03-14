@@ -16,6 +16,7 @@ class Endpoint(Enum):
     EARNINGS_PRESS_RELEASES = "/earnings/press-releases"
     FINAANCIAL_METRICS_HISTORICAL = "/financial-metrics"
     FINAANCIAL_METRICS_SNAPSHOT = "/financial-metrics/snapshot"
+    FINANCIAL_STATEMENTS = "/financials"
 
 
 BASE_URL = "https://api.financialdatasets.ai/"

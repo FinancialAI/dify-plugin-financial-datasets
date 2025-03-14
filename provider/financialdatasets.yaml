@@ -41,6 +41,7 @@ tools:
   - tools/earnings_press_releases/config.yaml
   - tools/financial_metrics_historical/config.yaml
   - tools/financial_metrics_snapshot/config.yaml
+  - tools/financial_statements/config.yaml
 extra:
   python:
     source: provider/financialdatasets.py
