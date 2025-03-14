@@ -7,7 +7,7 @@ from dify_plugin.entities.tool import ToolInvokeMessage
 from tools.base import Endpoint, get_required_parameter, query
 
 
-class FinancialMetricsHistoricalTool(Tool):
+class FinancialMetricsSnapshotTool(Tool):
     """
     A tool for retrieving company facts based on a given ticker symbol.
     """
@@ -31,7 +31,7 @@ class FinancialMetricsHistoricalTool(Tool):
 
         resp = query(
             credentials=self.runtime.credentials,
-            endpoint=Endpoint.FINAANCIAL_METRICS_HISTORICAL,
+            endpoint=Endpoint.FINAANCIAL_METRICS_SNAPSHOT,
             params={"ticker": ticker},
         )
         yield self.create_text_message(resp)

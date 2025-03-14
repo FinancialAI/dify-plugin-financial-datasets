@@ -8,11 +8,11 @@ identity:
     pt_BR: Métricas Financeiras Históricas
 description:
   human:
-    en_US: Get a real-time snapshot of key financial metrics and ratios for a ticker, including valuation, profitability, efficiency, liquidity, leverage, growth, and per share metrics.
-    zh_Hans: 获取股票代码的关键财务指标和比率的实时快照，包括估值、盈利能力、效率、流动性、杠杆、增长和每股指标。
-    ja_Jp: ティッカーの主要な財務指標と比率のリアルタイムスナップショットを取得します。これには、評価、収益性、効率、流動性、レバレッジ、成長、株価指標が含まれます。
-    pt_BR: Obtenha um instantâneo em tempo real das principais métricas e índices financeiros para um ticker, incluindo avaliação, lucratividade, eficiência, liquidez, alavancagem, crescimento e métricas por ação.
-  llm: Get a real-time snapshot of key financial metrics and ratios for a ticker, including valuation, profitability, efficiency, liquidity, leverage, growth, and per share metrics.
+    en_US: Get financial metrics for a ticker, including valuation, profitability, efficiency, liquidity, leverage, growth, and per share metrics.
+    zh_Hans: 获取股票代码的财务指标，包括估值、盈利能力、效率、流动性、杠杆、增长和每股指标。
+    ja_Jp: ティッカーの財務指標を取得します。これには、評価、収益性、効率、流動性、レバレッジ、成長、株価指標が含まれます。
+    pt_BR: Obtenha métricas financeiras para um ticker, incluindo avaliação, lucratividade, eficiência, liquidez, alavancagem, crescimento e métricas por ação.
+  llm: Get financial metrics for a ticker, including valuation, profitability, efficiency, liquidity, leverage, growth, and per share metrics.
 parameters:
   - name: ticker
     type: string

@@ -7,7 +7,7 @@ from dify_plugin.entities.tool import ToolInvokeMessage
 from tools.base import Endpoint, get_required_parameter, query
 
 
-class CompanyFactsTool(Tool):
+class EaringsPressReleasesTool(Tool):
     """
     A tool for retrieving company facts based on a given ticker symbol.
     """
