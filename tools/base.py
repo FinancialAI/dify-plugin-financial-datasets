@@ -13,6 +13,7 @@ class Endpoint(Enum):
     COMPANY_FACTS = "/company/facts"
     CRYPTO_PRICES = "/crypto/prices"
     CRYPTO_SNAPSHOT = "/crypto/prices/snapshot"
+    EARNINGS_PRESS_RELEASES = "/earnings/press-releases"
 
 
 BASE_URL = "https://api.financialdatasets.ai/"

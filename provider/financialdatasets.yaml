@@ -38,6 +38,7 @@ tools:
   - tools/company_facts/company_facts.yaml
   - tools/crypto_prices/crypto_prices.yaml
   - tools/crypto_snapshot/crypto_snapshot.yaml
+  - tools/earnings_press_releases/earnings_press_releases.yaml
 extra:
   python:
     source: provider/financialdatasets.py

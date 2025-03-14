@@ -32,9 +32,7 @@ class CryptoSnapshotTool(Tool):
         resp = query(
             credentials=self.runtime.credentials,
             endpoint=Endpoint.CRYPTO_SNAPSHOT,
-            params={
-                "ticker": ticker,
-            },
+            params={"ticker": ticker},
         )
 
         yield self.create_text_message(resp)
