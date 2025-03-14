@@ -43,6 +43,7 @@ tools:
   - tools/financial_metrics_snapshot/config.yaml
   - tools/financial_statements/config.yaml
   - tools/insider_trades/config.yaml
+  - tools/institutional_ownership/config.yaml
 extra:
   python:
     source: provider/financialdatasets.py

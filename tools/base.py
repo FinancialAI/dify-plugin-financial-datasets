@@ -18,6 +18,7 @@ class Endpoint(Enum):
     FINAANCIAL_METRICS_SNAPSHOT = "/financial-metrics/snapshot"
     FINANCIAL_STATEMENTS = "/financials"
     INSIDER_TRADES = "/insider-trades"
+    INSTITUTIONAL_OWNERSHIP = "/institutional-ownership"
 
 
 BASE_URL = "https://api.financialdatasets.ai/"
