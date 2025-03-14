@@ -31,4 +31,4 @@ parameters:
     form: llm
 extra:
   python:
-    source: tools/crypto_snapshot/crypto_snapshot.py
+    source: tools/crypto_snapshot/invoke.py

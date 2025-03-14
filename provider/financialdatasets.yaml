@@ -35,12 +35,12 @@ credentials_for_provider:
       pt_BR: Obtenha sua chave da API do Financial Datasets em financialdatasets.ai
     url: https://www.financialdatasets.ai
 tools:
-  - tools/company_facts/company_facts.yaml
-  - tools/crypto_prices/crypto_prices.yaml
-  - tools/crypto_snapshot/crypto_snapshot.yaml
-  - tools/earnings_press_releases/earnings_press_releases.yaml
-  - tools/financial_metrics_historical/financial_metrics_historical.yaml
-  - tools/financial_metrics_snapshot/financial_metrics_snapshot.yaml
+  - tools/company_facts/config.yaml
+  - tools/crypto_prices/config.yaml
+  - tools/crypto_snapshot/config.yaml
+  - tools/earnings_press_releases/config.yaml
+  - tools/financial_metrics_historical/config.yaml
+  - tools/financial_metrics_snapshot/config.yaml
 extra:
   python:
     source: provider/financialdatasets.py

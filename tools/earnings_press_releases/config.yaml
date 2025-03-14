@@ -31,4 +31,4 @@ parameters:
     form: llm
 extra:
   python:
-    source: tools/earnings_press_releases/earnings_press_releases.py
+    source: tools/earnings_press_releases/invoke.py

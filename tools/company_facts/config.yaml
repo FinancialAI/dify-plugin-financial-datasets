@@ -31,4 +31,4 @@ parameters:
     form: llm
 extra:
   python:
-    source: tools/company_facts/company_facts.py
+    source: tools/company_facts/invoke.py

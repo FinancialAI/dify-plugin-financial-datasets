@@ -31,4 +31,4 @@ parameters:
     form: llm
 extra:
   python:
-    source: tools/financial_metrics_historical/financial_metrics_historical.py
+    source: tools/financial_metrics_historical/invoke.py

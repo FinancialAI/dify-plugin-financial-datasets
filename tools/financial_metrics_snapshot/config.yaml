@@ -31,4 +31,4 @@ parameters:
     form: llm
 extra:
   python:
-    source: tools/financial_metrics_snapshot/financial_metrics_snapshot.py
+    source: tools/financial_metrics_snapshot/invoke.py
