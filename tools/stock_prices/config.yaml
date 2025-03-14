@@ -148,4 +148,4 @@ parameters:
     form: llm
 extra:
   python:
-    source: tools/crypto_prices/invoke.py
+    source: tools/stock_prices/invoke.py

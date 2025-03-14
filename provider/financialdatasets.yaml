@@ -46,6 +46,7 @@ tools:
   - tools/institutional_ownership/config.yaml
   - tools/company_news/config.yaml
   - tools/stock_prices/config.yaml
+  - tools/stock_snapshot/config.yaml
 extra:
   python:
     source: provider/financialdatasets.py
