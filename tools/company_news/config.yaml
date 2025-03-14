@@ -31,7 +31,7 @@ parameters:
     form: llm
   - name: start_date
     type: string
-    required: true
+    required: false
     label:
       en_US: Start date (YYYY-MM-DD)
       zh_Hans: 开始日期 (YYYY-MM-DD)
@@ -46,7 +46,7 @@ parameters:
     form: llm
   - name: end_date
     type: string
-    required: true
+    required: false
     label:
       en_US: End date (YYYY-MM-DD)
       zh_Hans: 结束日期 (YYYY-MM-DD)
