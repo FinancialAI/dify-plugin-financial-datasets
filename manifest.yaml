@@ -5,9 +5,13 @@ name: financialdatasets
 label:
   en_US: Financial Datassets
   zh_Hans: 金融数据集
+  ja_Jp: ファイナンシャルデータセット
+  pt_BR: Conjunto de Dados Financeiros
 description:
   en_US: Welcome to Financial Datasets, a developer-friendly stock market API.
   zh_Hans: 欢迎使用金融数据集，这是一个开发人员友好的股票市场 API。
+  ja_Jp: Financial Datasets へようこそ、開発者向けの株式市場 API です。
+  pt_BR: Bem-vindo ao Financial Datasets, uma API de mercado de ações amigável para desenvolvedores.
 icon: favicon.ico
 resource:
   memory: 268435456
