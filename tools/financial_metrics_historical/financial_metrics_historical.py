@@ -31,7 +31,7 @@ class CompanyFactsTool(Tool):
 
         resp = query(
             credentials=self.runtime.credentials,
-            endpoint=Endpoint.EARNINGS_PRESS_RELEASES,
+            endpoint=Endpoint.FINAANCIAL_METRICS_HISTORICAL,
             params={"ticker": ticker},
         )
         yield self.create_text_message(resp)
