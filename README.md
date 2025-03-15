@@ -35,7 +35,7 @@ Before using this plugin, you'll need to configure it with your FinancialDataset
 **Important:** Keep your API key secure and do not expose it in public code repositories.
 
 <div align="center">
-    <img src="_assets/plugin_configuration.png" alt="Plugin Configuration" width="90%"/>
+    <img src="_assets/plugin_configuration.png" alt="Plugin Configuration" width="95%"/>
 </div>
 
 ## Tool Features
@@ -79,7 +79,7 @@ Here are some examples of how you can utilize this FinancialDatasets.ai plugin i
 5. **Dify Output:** Dify presents the retrieved Bitcoin price to the user in a user-friendly format.
 
 <div align="center">
-    <img src="_assets/tool_call_example.png" alt="Dify Chatflow" width="90%"/>
+    <img src="_assets/tool_call_example.png" alt="Dify Chatflow" width="95%"/>
 </div>
 
 ## Further Information
