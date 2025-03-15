@@ -7,9 +7,9 @@ from dify_plugin.entities.tool import ToolInvokeMessage
 from tools.base import Endpoint, get_required_parameter, http_get
 
 
-class InsiderTradesTool(Tool):
+class SECFilingsTool(Tool):
     """
-    A tool for retrieving insider trades based on a given ticker symbol.
+    A tool for retrieving SEC filings based on a given ticker symbol.
     """
 
     def _invoke(self, tool_parameters: dict[str, Any]) -> Generator[ToolInvokeMessage]:
@@ -28,11 +28,10 @@ class InsiderTradesTool(Tool):
         """
 
         ticker = get_required_parameter(tool_parameters, "ticker")
-        limit = tool_parameters.get("limit", None)
 
         resp = http_get(
             credentials=self.runtime.credentials,
-            endpoint=Endpoint.INSIDER_TRADES,
-            params={"ticker": ticker, "limit": limit},
+            endpoint=Endpoint.SEC_FILINGS,
+            params={"ticker": ticker},
         )
         yield self.create_text_message(resp)

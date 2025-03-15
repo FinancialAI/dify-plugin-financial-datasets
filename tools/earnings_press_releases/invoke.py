@@ -9,7 +9,7 @@ from tools.base import Endpoint, get_required_parameter, http_get
 
 class EaringsPressReleasesTool(Tool):
     """
-    A tool for retrieving company facts based on a given ticker symbol.
+    A tool for retrieving earnings press releases based on a given ticker symbol.
     """
 
     def _invoke(self, tool_parameters: dict[str, Any]) -> Generator[ToolInvokeMessage]:
