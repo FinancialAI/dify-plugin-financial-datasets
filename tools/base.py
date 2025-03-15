@@ -21,6 +21,7 @@ class Endpoint(Enum):
     INSTITUTIONAL_OWNERSHIP = "/institutional-ownership"
     COMPANY_NEWS = "/news"
     STOCK_PRICES = "/prices"
+    STOCK_SNAPSHOT = "/prices/snapshot"
     SEC_FILINGS = "/filings"
     SEC_FILINGS_ITEMS = "/filings/items"
 

@@ -31,7 +31,7 @@ class CryptoSnapshotTool(Tool):
 
         resp = http_get(
             credentials=self.runtime.credentials,
-            endpoint=Endpoint.CRYPTO_SNAPSHOT,
+            endpoint=Endpoint.STOCK_SNAPSHOT,
             params={"ticker": ticker},
         )
 
