@@ -4,7 +4,7 @@ from typing import Any
 from dify_plugin import Tool
 from dify_plugin.entities.tool import ToolInvokeMessage
 
-from tools.base import Endpoint, get_required_parameter, query
+from tools.base import Endpoint, get_required_parameter, http_get
 
 
 class InsiderTradesTool(Tool):
@@ -30,7 +30,7 @@ class InsiderTradesTool(Tool):
         ticker = get_required_parameter(tool_parameters, "ticker")
         limit = tool_parameters.get("limit", None)
 
-        resp = query(
+        resp = http_get(
             credentials=self.runtime.credentials,
             endpoint=Endpoint.INSIDER_TRADES,
             params={"ticker": ticker, "limit": limit},

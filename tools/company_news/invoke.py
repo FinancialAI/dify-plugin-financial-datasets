@@ -4,7 +4,7 @@ from typing import Any
 from dify_plugin import Tool
 from dify_plugin.entities.tool import ToolInvokeMessage
 
-from tools.base import Endpoint, get_required_parameter, query
+from tools.base import Endpoint, get_required_parameter, http_get
 
 
 class CompanyNewsTool(Tool):
@@ -32,7 +32,7 @@ class CompanyNewsTool(Tool):
         end_date = tool_parameters.get("end_date", None)
         limit = tool_parameters.get("limit", None)
 
-        resp = query(
+        resp = http_get(
             credentials=self.runtime.credentials,
             endpoint=Endpoint.COMPANY_NEWS,
             params={

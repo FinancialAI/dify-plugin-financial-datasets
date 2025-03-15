@@ -4,7 +4,7 @@ from typing import Any
 from dify_plugin import Tool
 from dify_plugin.entities.tool import ToolInvokeMessage
 
-from tools.base import Endpoint, get_required_parameter, query
+from tools.base import Endpoint, get_required_parameter, http_get
 
 
 class StockPricesTool(Tool):
@@ -36,7 +36,7 @@ class StockPricesTool(Tool):
         end_date = get_required_parameter(tool_parameters, "end_date")
         limit = tool_parameters.get("limit", None)
 
-        resp = query(
+        resp = http_get(
             credentials=self.runtime.credentials,
             endpoint=Endpoint.STOCK_PRICES,
             params={

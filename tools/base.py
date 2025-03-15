@@ -26,7 +26,7 @@ class Endpoint(Enum):
 BASE_URL = "https://api.financialdatasets.ai/"
 
 
-def query(credentials: dict[str, Any], endpoint: Endpoint, params: dict):
+def http_get(credentials: dict[str, Any], endpoint: Endpoint, params: dict):
     """
     Sends a GET request to the specified endpoint with the provided credentials and parameters.
 
@@ -51,6 +51,39 @@ def query(credentials: dict[str, Any], endpoint: Endpoint, params: dict):
         params = {k: v for k, v in params.items() if v is not None}
         response = requests.get(
             urljoin(BASE_URL, endpoint.value), params=params, headers=headers
+        )
+        # response.raise_for_status()
+        return response.text
+    except requests.exceptions.RequestException as e:
+        raise Exception(f"Error sending request: {e}")
+    except Exception as e:
+        raise Exception(f"Error processing response: {e}")
+
+
+def http_post(credentials: dict[str, Any], endpoint: Endpoint, data: dict):
+    """
+    Sends a POST request to the specified endpoint with the provided credentials and data.
+
+    Args:
+        credentials (dict[str, Any]): A dictionary containing the API credentials.
+            Must include the key "financial_datasets_api_key".
+        endpoint (Endpoint): The endpoint to which the request will be sent.
+            Should be an instance of the `Endpoint` enum.
+        data (dict): A dictionary of data to include in the request.
+
+    Returns:
+        str: The response text from the API.
+
+    Raises:
+        Exception: If there is an error sending the request or processing the response.
+    """
+    try:
+        headers = {
+            "X-API-KEY": credentials["financial_datasets_api_key"],
+            "Content-Type": "application/json",
+        }
+        response = requests.post(
+            urljoin(BASE_URL, endpoint.value), json=data, headers=headers
         )
         # response.raise_for_status()
         return response.text

@@ -4,7 +4,7 @@ from typing import Any
 from dify_plugin import Tool
 from dify_plugin.entities.tool import ToolInvokeMessage
 
-from tools.base import Endpoint, get_required_parameter, query
+from tools.base import Endpoint, get_required_parameter, http_get
 
 
 class EaringsPressReleasesTool(Tool):
@@ -29,7 +29,7 @@ class EaringsPressReleasesTool(Tool):
 
         ticker = get_required_parameter(tool_parameters, "ticker")
 
-        resp = query(
+        resp = http_get(
             credentials=self.runtime.credentials,
             endpoint=Endpoint.EARNINGS_PRESS_RELEASES,
             params={"ticker": ticker},

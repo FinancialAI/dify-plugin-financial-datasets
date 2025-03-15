@@ -4,7 +4,7 @@ from typing import Any
 from dify_plugin import Tool
 from dify_plugin.entities.tool import ToolInvokeMessage
 
-from tools.base import Endpoint, query, get_required_parameter
+from tools.base import Endpoint, get_required_parameter, http_get
 
 
 class CryptoSnapshotTool(Tool):
@@ -29,7 +29,7 @@ class CryptoSnapshotTool(Tool):
 
         ticker = get_required_parameter(tool_parameters, "ticker")
 
-        resp = query(
+        resp = http_get(
             credentials=self.runtime.credentials,
             endpoint=Endpoint.CRYPTO_SNAPSHOT,
             params={"ticker": ticker},
