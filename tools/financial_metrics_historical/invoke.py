@@ -31,7 +31,7 @@ class FinancialMetricsHistoricalTool(Tool):
 
         resp = http_get(
             credentials=self.runtime.credentials,
-            endpoint=Endpoint.FINAANCIAL_METRICS_HISTORICAL,
+            endpoint=Endpoint.FINANCIAL_METRICS_HISTORICAL,
             params={"ticker": ticker},
         )
         yield self.create_text_message(resp)

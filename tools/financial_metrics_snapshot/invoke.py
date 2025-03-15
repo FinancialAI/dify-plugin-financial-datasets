@@ -31,7 +31,7 @@ class FinancialMetricsSnapshotTool(Tool):
 
         resp = http_get(
             credentials=self.runtime.credentials,
-            endpoint=Endpoint.FINAANCIAL_METRICS_SNAPSHOT,
+            endpoint=Endpoint.FINANCIAL_METRICS_SNAPSHOT,
             params={"ticker": ticker},
         )
         yield self.create_text_message(resp)
