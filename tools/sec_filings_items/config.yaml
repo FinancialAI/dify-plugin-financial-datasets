@@ -1,0 +1,235 @@
+identity:
+  name: sec_filings_items
+  author: financialai
+  label:
+    en_US: SEC Filings Items
+    zh_Hans: SEC备案项目
+    ja_Jp: SEC 提出書類アイテム
+    pt_BR: Itens de Arquivamentos da SEC
+description:
+  human:
+    en_US: Get SEC filing items for a company. The Items endpoint allows you to extract specific sections (called items) from a given 10-K or 10-Q filing.
+    zh_Hans: 获取公司的 SEC 备案项目。Items 端点允许您从给定的 10-K 或 10-Q 备案中提取特定部分（称为项目）。
+    ja_Jp: 会社の SEC 提出書類アイテムを取得します。Items エンドポイントを使用すると、指定された 10-K または 10-Q 提出書類から特定のセクション（アイテムと呼ばれる）を抽出できます。
+    pt_BR: Obtenha itens de arquivamento da SEC para uma empresa. O endpoint Items permite que você extraia seções específicas (chamadas itens) de um arquivamento 10-K ou 10-Q fornecido.
+  llm: Get SEC filing items for a company. The Items endpoint allows you to extract specific sections (called items) from a given 10-K or 10-Q filing.
+parameters:
+  - name: ticker
+    type: string
+    required: true
+    label:
+      en_US: Ticker symbol
+      zh_Hans: 股票代码
+      ja_Jp: ティッカーシンボル
+      pt_BR: Símbolo do ticker
+    human_description:
+      en_US: The ticker symbol of the company you want to get SEC filing items for.
+      zh_Hans: 您想获取公司的 SEC 备案项目的公司的股票代码。
+      ja_Jp: SEC 提出書類アイテムを取得したい会社のティッカーシンボル。
+      pt_BR: O símbolo do ticker da empresa para a qual você deseja obter itens de arquivamento da SEC.
+    llm_description: The ticker symbol of the company you want to get SEC filing items for.
+    form: llm
+  - name: filing_type
+    type: select
+    required: true
+    label:
+      en_US: Type of filing
+      zh_Hans: 备案类型
+      ja_Jp: 提出書類の種類
+      pt_BR: O tipo de arquivamento
+    human_description:
+      en_US: The type of filing you want to get items for.
+      zh_Hans: 您想获取项目的备案类型。
+      ja_Jp: アイテムを取得したい提出書類の種類。
+      pt_BR: O tipo de arquivamento para o qual você deseja obter itens.
+    llm_description: The type of filing you want to get items for.
+    form: llm
+    options:
+      - value: 10-K
+        label:
+          en_US: 10-K
+          zh_Hans: 10-K
+          ja_Jp: 10-K
+          pt_BR: 10-K
+      - value: 10-Q
+        label:
+          en_US: 10-Q
+          zh_Hans: 10-Q
+          ja_Jp: 10-Q
+          pt_BR: 10-Q
+  - name: year
+    type: number
+    required: true
+    label:
+      en_US: Year of the filing
+      zh_Hans: 备案年份
+      ja_Jp: 提出書類の年
+      pt_BR: O ano do arquivamento
+    human_description:
+      en_US: The year of the filing you want to get items for.
+      zh_Hans: 您想获取项目的备案年份。
+      ja_Jp: アイテムを取得したい提出書類の年。
+      pt_BR: O ano do arquivamento para o qual você deseja obter itens.
+    llm_description: The year of the filing you want to get items for.
+    form: llm
+  - name: quarter
+    type: number
+    required: false
+    label:
+      en_US: Quarter of the filing
+      zh_Hans: 备案季度
+      ja_Jp: 提出書類の四半期
+      pt_BR: O trimestre do arquivamento
+    human_description:
+      en_US: The quarter of the filing you want to get items for.
+      zh_Hans: 您想获取项目的备案季度。
+      ja_Jp: アイテムを取得したい提出書類の四半期。
+      pt_BR: O trimestre do arquivamento para o qual você deseja obter itens.
+    llm_description: The quarter of the filing you want to get items for.
+    form: llm
+  - name: item
+    type: select
+    required: false
+    label:
+      en_US: Item
+      zh_Hans: 项目
+      ja_Jp: アイテム
+      pt_BR: Item
+    human_description:
+      en_US: The item you want to get.
+      zh_Hans: 您想获取的项目。
+      ja_Jp: 取得したいアイテム。
+      pt_BR: O item que você deseja obter.
+    llm_description: The item you want to get.
+    form: llm
+    # Available options: Item-1, Item-1A, Item-1B, Item-2, Item-3, Item-4, Item-5, Item-6, Item-7, Item-7A, Item-8, Item-9, Item-9A, Item-9B, Item-10, Item-11, Item-12, Item-13, Item-14, Item-15, Item-16
+    option:
+      - value: Item-1
+        label:
+          en_US: Item 1
+          zh_Hans: 项目 1
+          ja_Jp: アイテム 1
+          pt_BR: Item 1
+      - value: Item-1A
+        label:
+          en_US: Item 1A
+          zh_Hans: 项目 1A
+          ja_Jp: アイテム 1A
+          pt_BR: Item 1A
+      - value: Item-1B
+        label:
+          en_US: Item 1B
+          zh_Hans: 项目 1B
+          ja_Jp: アイテム 1B
+          pt_BR: Item 1B
+      - value: Item-2
+        label:
+          en_US: Item 2
+          zh_Hans: 项目 2
+          ja_Jp: アイテム 2
+          pt_BR: Item 2
+      - value: Item-3
+        label:
+          en_US: Item 3
+          zh_Hans: 项目 3
+          ja_Jp: アイテム 3
+          pt_BR: Item 3
+      - value: Item-4
+        label:
+          en_US: Item 4
+          zh_Hans: 项目 4
+          ja_Jp: アイテム 4
+          pt_BR: Item 4
+      - value: Item-5
+        label:
+          en_US: Item 5
+          zh_Hans: 项目 5
+          ja_Jp: アイテム 5
+          pt_BR: Item 5
+      - value: Item-6
+        label:
+          en_US: Item 6
+          zh_Hans: 项目 6
+          ja_Jp: アイテム 6
+          pt_BR: Item 6
+      - value: Item-7
+        label:
+          en_US: Item 7
+          zh_Hans: 项目 7
+          ja_Jp: アイテム 7
+          pt_BR: Item 7
+      - value: Item-7A
+        label:
+          en_US: Item 7A
+          zh_Hans: 项目 7A
+          ja_Jp: アイテム 7A
+          pt_BR: Item 7A
+      - value: Item-8
+        label:
+          en_US: Item 8
+          zh_Hans: 项目 8
+          ja_Jp: アイテム 8
+          pt_BR: Item 8
+      - value: Item-9
+        label:
+          en_US: Item 9
+          zh_Hans: 项目 9
+          ja_Jp: アイテム 9
+          pt_BR: Item 9
+      - value: Item-9A
+        label:
+          en_US: Item 9A
+          zh_Hans: 项目 9A
+          ja_Jp: アイテム 9A
+          pt_BR: Item 9A
+      - value: Item-9B
+        label:
+          en_US: Item 9B
+          zh_Hans: 项目 9B
+          ja_Jp: アイテム 9B
+          pt_BR: Item 9B
+      - value: Item-10
+        label:
+          en_US: Item 10
+          zh_Hans: 项目 10
+          ja_Jp: アイテム 10
+          pt_BR: Item 10
+      - value: Item-11
+        label:
+          en_US: Item 11
+          zh_Hans: 项目 11
+          ja_Jp: アイテム 11
+          pt_BR: Item 11
+      - value: Item-12
+        label:
+          en_US: Item 12
+          zh_Hans: 项目 12
+          ja_Jp: アイテム 12
+          pt_BR: Item 12
+      - value: Item-13
+        label:
+          en_US: Item 13
+          zh_Hans: 项目 13
+          ja_Jp: アイテム 13
+          pt_BR: Item 13
+      - value: Item-14
+        label:
+          en_US: Item 14
+          zh_Hans: 项目 14
+          ja_Jp: アイテム 14
+          pt_BR: Item 14
+      - value: Item-15
+        label:
+          en_US: Item 15
+          zh_Hans: 项目 15
+          ja_Jp: アイテム 15
+          pt_BR: Item 15
+      - value: Item-16
+        label:
+          en_US: Item 16
+          zh_Hans: 项目 16
+          ja_Jp: アイテム 16
+          pt_BR: Item 16
+extra:
+  python:
+    source: tools/sec_filings_items/invoke.py

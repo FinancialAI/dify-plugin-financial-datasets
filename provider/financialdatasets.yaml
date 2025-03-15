@@ -48,6 +48,7 @@ tools:
   - tools/stock_prices/config.yaml
   - tools/stock_snapshot/config.yaml
   - tools/sec_filings/config.yaml
+  - tools/sec_filings_items/config.yaml
 extra:
   python:
     source: provider/financialdatasets.py

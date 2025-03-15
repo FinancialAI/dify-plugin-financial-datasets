@@ -22,6 +22,7 @@ class Endpoint(Enum):
     COMPANY_NEWS = "/news"
     STOCK_PRICES = "/prices"
     SEC_FILINGS = "/filings"
+    SEC_FILINGS_ITEMS = "/filings/items"
 
 
 BASE_URL = "https://api.financialdatasets.ai/"
