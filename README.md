@@ -3,6 +3,7 @@
 [![Dify Plugin](https://img.shields.io/badge/Dify-Plugin-blueviolet)](https://dify.ai)
 [![FinancialDatasets.ai](https://img.shields.io/badge/FinancialDatasets.ai-API-brightgreen)](https://financialdatasets.ai)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![GitHub Release](https://img.shields.io/github/v/release/FinancialAI/dify-plugin-financial-datasets)
 
 ## Overview
 
