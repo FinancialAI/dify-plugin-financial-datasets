@@ -28,10 +28,12 @@ class FinancialMetricsHistoricalTool(Tool):
         """
 
         ticker = get_required_parameter(tool_parameters, "ticker")
+        period = get_required_parameter(tool_parameters, "period")
+        limit = tool_parameters.get("limit", None)
 
         resp = http_get(
             credentials=self.runtime.credentials,
             endpoint=Endpoint.FINANCIAL_METRICS_HISTORICAL,
-            params={"ticker": ticker},
+            params={"ticker": ticker, "period": period, "limit": limit},
         )
         yield self.create_text_message(resp)
