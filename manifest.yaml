@@ -3,10 +3,10 @@ type: plugin
 author: financialai
 name: financialdatasets
 label:
-  en_US: Financial Datassets
-  zh_Hans: 金融数据集
-  ja_Jp: ファイナンシャルデータセット
-  pt_BR: Conjunto de Dados Financeiros
+  en_US: FinancialDatasets.ai
+  zh_Hans: FinancialDatasets.ai
+  ja_Jp: FinancialDatasets.ai
+  pt_BR: FinancialDatasets.ai
 description:
   en_US: Welcome to Financial Datasets, a developer-friendly stock market API.
   zh_Hans: 欢迎使用金融数据集，这是一个开发人员友好的股票市场 API。
